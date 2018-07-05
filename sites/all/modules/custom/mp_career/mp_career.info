@@ -1,0 +1,5 @@
+name = Metropolis Careers
+description = Contains utility functions related to Careers module.
+core = 7.x
+package = Custom Metropolis
+dependencies[] = webform
