@@ -1,0 +1,16 @@
+<?php
+/**
+ * Modify a Webform submission, prior to saving it in the database.
+ *
+ * @param $node
+ *   The Webform node on which this submission was made.
+ * @param $submission
+ *   The Webform submission that is about to be saved to the database.
+ */
+function mp_career_webform_submission_presave($node, &$submission) {
+  // Update some component's value before it is saved.
+  	$args = arg();
+	$job_id = !empty($args) ? $args[1] : "";
+	$submission->data[8][0] = $job_id;
+}
+
